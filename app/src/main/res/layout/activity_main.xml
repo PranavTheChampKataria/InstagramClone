@@ -8,28 +8,18 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
-        android:id="@+id/message"
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:layout_centerVertical="true"
-        android:layout_marginStart="24dp"
-        android:layout_marginTop="24dp"
-        android:text="@string/home"
-        android:textAlignment="center"
-        android:textSize="25dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="match_parent"
+        android:layout_above="@+id/nav_view"
+        android:id="@+id/fragment_container"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/white"
         app:labelVisibilityMode="unlabeled"
-        app:menu="@menu/bottom_nav_menu" />
+        app:menu="@menu/bottom_nav_menu"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>
